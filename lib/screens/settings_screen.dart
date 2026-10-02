@@ -65,10 +65,10 @@ class SettingsScreen extends StatelessWidget {
                 title: const Text('Privacy'),
                 onTap: () => _showPrivacy(context),
               ),
-              ListTile(
-                leading: const Icon(Icons.tag_rounded),
-                title: const Text('Version'),
-                subtitle: const Text(AppConstants.version),
+              const ListTile(
+                leading: Icon(Icons.tag_rounded),
+                title: Text('Version'),
+                subtitle: Text(AppConstants.version),
               ),
             ],
           );
