@@ -260,8 +260,8 @@ void main() {
         initial,
         state([
           [0, 1],
-          [2, 1],
-          [1, 2],
+          [2, 3],
+          [0, 2],
         ]),
       );
       expect(v.solved, isFalse);

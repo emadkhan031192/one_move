@@ -33,6 +33,11 @@ Future<AppServices> makeServices() async {
 void main() {
   group('home screen', () {
     testWidgets('shows brand, stats and all destinations', (tester) async {
+      // Tall surface so every ListView child is built at once.
+      tester.view.physicalSize = const Size(1080, 2400);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
       final services = await makeServices();
       await tester.pumpWidget(
         MaterialApp(home: HomeScreen(services: services)),
@@ -136,6 +141,11 @@ void main() {
 
   group('settings screen', () {
     testWidgets('shows toggles and data actions', (tester) async {
+      // Tall surface so every ListView child is built at once.
+      tester.view.physicalSize = const Size(1080, 2400);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
       final services = await makeServices();
       await tester.pumpWidget(
         MaterialApp(home: SettingsScreen(services: services)),
