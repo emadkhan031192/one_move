@@ -2,6 +2,7 @@
 ///
 /// These types are intentionally plain Dart (no Flutter dependency) so the
 /// puzzle engine and level generators stay testable in isolation.
+library;
 
 /// The six puzzle mechanics supported by the game.
 enum PuzzleType { matchstick, tile, shape, line, number, lateral }

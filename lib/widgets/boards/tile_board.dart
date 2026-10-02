@@ -23,9 +23,9 @@ class TileBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = widget.state['size'] as int;
-    final options = widget.state['options'] as int;
-    final grid = List<int>.from(widget.state['grid'] as List);
+    final size = state['size'] as int;
+    final options = state['options'] as int;
+    final grid = List<int>.from(state['grid'] as List);
     final scheme = Theme.of(context).colorScheme;
 
     return GridView.builder(
@@ -43,7 +43,7 @@ class TileBoard extends StatelessWidget {
           onTap: () {
             final nextGrid = List<int>.from(grid);
             nextGrid[i] = (nextGrid[i] + 1) % options;
-            final next = Map<String, dynamic>.from(widget.state);
+            final next = Map<String, dynamic>.from(state);
             next['grid'] = nextGrid;
             onChanged(next);
           },

@@ -193,6 +193,7 @@ class _GameScreenState extends State<GameScreen> {
                 final earned = await widget.services.ads.showRewardedAd();
                 if (!mounted) return;
                 if (earned) {
+                  if (!ctx.mounted) return;
                   Navigator.of(ctx).pop();
                   _showHint();
                 }

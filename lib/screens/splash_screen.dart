@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 class _LogoMark extends StatelessWidget {
   final ColorScheme scheme;
-  const _LogoMark({super.key, required this.scheme});
+  const _LogoMark({required this.scheme});
 
   @override
   Widget build(BuildContext context) {

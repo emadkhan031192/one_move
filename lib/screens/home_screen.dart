@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           listenable: services.progress,
           builder: (context, _) {
             final progress = services.progress;
-            final total = AppConstants.totalLevels;
+            const total = AppConstants.totalLevels;
             final pct = progress.completionPercent(total);
             final playId = progress.unlockedLevel > total
                 ? total

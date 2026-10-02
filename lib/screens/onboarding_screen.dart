@@ -14,7 +14,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final _pages = const PageController();
+  final _pages = PageController();
   int _index = 0;
 
   static const _slides = [

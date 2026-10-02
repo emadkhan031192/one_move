@@ -52,7 +52,7 @@ class ShapeValidator {
 
     final movedId = moved.single;
     if (mustMoveId != null && movedId != mustMoveId) {
-      return MoveVerdict(
+      return const MoveVerdict(
         solved: false,
         movesUsed: 1,
         feedback: 'The obvious pieces were not the answer…',
