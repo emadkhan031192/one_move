@@ -29,8 +29,8 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-    - name: Format code
-  run: dart format .
+      - name: Format code
+        run: dart format .
 
       - name: Analyze
         run: flutter analyze
@@ -39,9 +39,6 @@ jobs:
         run: flutter test
 
       - name: Generate CI debug keystore
-        # The release build is signed with a debug keystore so CI produces a
-        # distributable artifact without committing secrets. Never ship a
-        # production release with this key.
         run: |
           keytool -genkeypair -v \
             -keystore debug.keystore \
